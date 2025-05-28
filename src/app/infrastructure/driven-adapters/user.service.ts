@@ -1,6 +1,5 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Signal } from '@angular/core';
 import { UserGateway } from '../../domain/model/gateways/user-gateway';
-import { Observable } from 'rxjs';
 import { User } from '../../domain/model/user';
 import { UserLogin } from '../../domain/model/user-login';
 
@@ -9,11 +8,11 @@ import { UserLogin } from '../../domain/model/user-login';
 })
 export class UserService extends UserGateway {
 
-  override registerUser(user: User): Observable<User> {
+  override registerUser(user: User): Signal<User> {
     throw new Error('Method not implemented.');
   }
 
-  override logInUser(userLogin: UserLogin): Observable<boolean> {
+  override logInUser(userLogin: UserLogin): Signal<boolean> {
     throw new Error('Method not implemented.');
   }
 }

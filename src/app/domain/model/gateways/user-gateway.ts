@@ -1,8 +1,8 @@
-import { Observable } from 'rxjs';
 import { User } from '../user';
 import { UserLogin } from '../user-login';
+import { Signal } from '@angular/core';
 
 export abstract class UserGateway {
-  abstract registerUser(user: User): Observable<User>;
-  abstract logInUser(userLogin: UserLogin): Observable<boolean>;
+  abstract registerUser(user: User): Signal<User>;
+  abstract logInUser(userLogin: UserLogin): Signal<boolean>;
 }

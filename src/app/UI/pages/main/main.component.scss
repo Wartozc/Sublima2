@@ -1,0 +1,74 @@
+@import '../../ds/colors/variables';
+header {
+    display: flex;
+    flex-direction: row;
+    color: $blue-color;
+    justify-content: space-around;
+    align-items: center;
+    & .header--container__menu {
+        height: 7vh;
+    }
+    & input {
+        width: 30vw;
+        height: 5vh;
+        border: 1px solid $dark-blue-color;
+    }
+    & section {
+        display: flex;
+        flex-direction: column;
+        & img {
+            margin-top: 2vh;
+            height: 5vh;
+        }
+    }
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 10vh;
+    justify-content: space-around;
+    background-color: $dark-blue-color;
+    align-items: center;
+    & li {
+        list-style: none;
+        font-size: 2rem;
+        color: white;
+    }
+}
+
+.body--container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 86vw;
+    margin-left: 7vw;
+    & p {
+        text-align: left;
+    }
+    &__images {
+        display: flex;
+        width: 86vw;
+        height: 50vh;
+        justify-content: center;
+        align-items: center;
+        & img {
+            width: 20vw;
+            height: 40vh;
+        }
+        & .logo {
+            margin-top: -20vh;
+            width: 35vw;
+            height: 60vh;
+        }
+    }
+}
+
+.footer--container {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: $dark-blue-color;
+    text-align: center;
+}

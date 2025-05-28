@@ -1,7 +1,6 @@
-import { inject, Injectable } from "@angular/core";
+import { inject, Injectable, Signal } from "@angular/core";
 import { UserGateway } from '../model/gateways/user-gateway';
 import { User } from "../model/user";
-import { Observable } from "rxjs";
 import { UserLogin } from "../model/user-login";
 
 @Injectable({
@@ -12,11 +11,11 @@ import { UserLogin } from "../model/user-login";
 export class UserRegisterUseCase{
   private _userGateway = inject(UserGateway);
 
-  registerUser(user: User): Observable<User>{
+  registerUser(user: User): Signal<User>{
     return this._userGateway.registerUser(user);
   };
 
-  logInUser(userLogin: UserLogin): Observable<boolean>{
+  logInUser(userLogin: UserLogin): Signal<boolean>{
     return this._userGateway.logInUser(userLogin);
   };
 
