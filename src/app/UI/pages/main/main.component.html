@@ -1,6 +1,12 @@
 <header class="header--container">
-    <img class="header--container__menu" src="./Menu.svg" alt="Menu">
-    <img src="./logotipo.png" alt="">
+    <span class="menu--image">
+      <img class="header--container__menu" src="./Menu.svg" alt="Menu">
+      <div class="tooltip">
+        <p routerLink="/register">Registrarse</p>
+        <p routerLink="/login">Autenticarse</p>
+      </div>
+    </span>
+    <img src="./logotipo.png" alt="" routerLink="inicio" routerLinkActive="active">
     <input type="text" placeholder="Buscar...">
     <section>
         <img src="./Parati.svg" alt="">
@@ -21,26 +27,16 @@
 </header>
 <nav class="menu--container">
     <ul>
-        <li>Inicio</li>
-        <li>Hacer pedido</li>
-        <li>Revisar pedido</li>
-        <li>Quienes somos</li>
-        <li>Contactanos</li>
+        <li routerLink="inicio" routerLinkActive="active">Inicio</li>
+        <li routerLink="hacer-pedido" routerLinkActive="active">Hacer pedido</li>
+        <li routerLink="revisar-pedido" routerLinkActive="active">Revisar pedido</li>
+        <li routerLink="quienes-somos" routerLinkActive="active">Quienes somos</li>
+        <li routerLink="contactanos" routerLinkActive="active">Contactanos</li>
     </ul>
 </nav>
-<div class="body--container">
-    <h1>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    </h1>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-        in reprehenderit in voluptate velit esse cillum
-    </p>
-    <div class="body--container__images">
-        <img class="logo" src="./LogoConImagen.png" alt="Logo con estampado">
-        <img src="./Perro.png" alt="Logo con estampado">
-    </div>
-</div>
+
+<router-outlet></router-outlet>
+
 <footer class="footer--container">
     <p>Copy Rigth &#64; todos los derechos reservados</p>
     <p>Realizado por Sublima2 2025</p>
