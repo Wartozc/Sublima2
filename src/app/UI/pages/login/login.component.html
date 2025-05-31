@@ -1,18 +1,19 @@
+<span class="material-symbols-outlined back" (click)="goToBack()">arrow_back</span>
 <div class="container">
     <h1>Iniciar Sesión</h1>
-    <form action="">
+    <form action="" [formGroup]="forGroupAuth">
         <section class="input--group">
             <label for="email">Correo electrónico</label>
-            <input type="text" name="email">
+            <input type="text" name="email" formControlName="email">
         </section>
         <section class="input--group">
             <label for="contrasena">Contraseña</label>
-            <input type="password" name="contrasena">
+            <input type="password" name="contrasena" formControlName="password">
         </section>
     </form>
     <div class="body--container__images">
         <img class="logo" src="./LogoConImagen.png" alt="Logo con estampado">
         <img src="./Perro.png" alt="Logo con estampado">
     </div>
-    <button><span class="material-symbols-outlined">login</span> Ingresar</button>
+    <button (click)="logIn()"><span class="material-symbols-outlined">login</span> Ingresar</button>
 </div>

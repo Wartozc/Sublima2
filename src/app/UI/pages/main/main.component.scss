@@ -2,6 +2,7 @@
 header {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     color: $blue-color;
     justify-content: space-around;
     align-items: center;
@@ -30,10 +31,10 @@ header {
 
 ul {
     display: flex;
-    flex-direction: row;
-    width: 97.4vw;
-    height: 10vh;
-    justify-content: space-around;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    justify-content: center;
     background-color: $dark-blue-color;
     align-items: center;
     & li {
@@ -47,6 +48,7 @@ ul {
 .footer--container {
     display: flex;
     flex-direction: column;
+    margin-top: 5vh;
     color: white;
     background-color: $dark-blue-color;
     text-align: center;
@@ -61,7 +63,7 @@ ul {
     position: absolute;
     left: 1vw;
     top: 10vh;
-    width: 7vw;
+    width: 30vw;
     text-align: center;
     background-color: rgba($color: $green-yellow-color, $alpha: 0.9);
     color: $dark-blue-color;
@@ -73,4 +75,34 @@ ul {
 
 .menu--image:hover .tooltip {
     display: block;
+}
+
+@media only screen and (min-width: 767px) {
+    ul {
+        flex-direction: row;
+        width: 97.4vw;
+        height: 10vh;
+        justify-content: space-around;
+    }
+    .footer--container {
+        margin-top: 0;
+    }
+    .tooltip {
+        width: 12vw;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    ul {
+        flex-direction: row;
+        width: 97.4vw;
+        height: 10vh;
+        justify-content: space-around;
+    }
+    .footer--container {
+        margin-top: 0;
+    }
+    .tooltip {
+        width: 10vw;
+    }
 }

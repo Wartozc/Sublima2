@@ -7,6 +7,5 @@ export interface User {
   phone: string,
   address: string,
   city: string,
-  country: string,
-  passwordConfirmed: string
+  country: string
 }
